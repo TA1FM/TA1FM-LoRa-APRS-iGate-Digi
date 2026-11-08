@@ -83,6 +83,7 @@ Support for additional ESP32 LoRa boards is planned.
 📘 [Türkçe Kurulum Rehberi](KURULUM.md)
 📘 [Arduino IDE Derleme Rehberi](DERLEME.md)
 🌍 [English Installation Guide](INSTALLATION_EN.md)
+🔌 [Donanım Bağlantıları / Hardware Connections](DONANIM_BAGLANTILARI.md)
 ## Kaynaklar ve Teşekkür / Credits & Acknowledgements
 
 **🇹🇷 Türkçe**

@@ -1,4 +1,4 @@
-# TA1FM LoRa APRS iGate & Digi
+# TA1FM LoRa APRS iGate & Digipeater
 
 **ESP32-S3 tabanlı LoRa APRS Internet Gateway ve Digipeater yazılımı**
 

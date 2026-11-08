@@ -77,3 +77,6 @@ Support for additional ESP32 LoRa boards is planned.
 ---
 
 **73 de TA1FM!** 📡
+## Web Kontrol Paneli / Web Control Panel
+
+![TA1FM Web Panel](TA1FM-Web-Panel.png)

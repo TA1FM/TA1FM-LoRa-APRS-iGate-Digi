@@ -82,6 +82,7 @@ Support for additional ESP32 LoRa boards is planned.
 ![TA1FM Web Panel](TA1FM-Web-Panel.png)
 📘 [Türkçe Kurulum Rehberi](KURULUM.md)
 📘 [Arduino IDE Derleme Rehberi](DERLEME.md)
+🌍 [English Installation Guide](INSTALLATION_EN.md)
 ## Kaynaklar ve Teşekkür / Credits & Acknowledgements
 
 **🇹🇷 Türkçe**

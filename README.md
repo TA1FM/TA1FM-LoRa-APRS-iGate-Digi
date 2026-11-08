@@ -80,3 +80,21 @@ Support for additional ESP32 LoRa boards is planned.
 ## Web Kontrol Paneli / Web Control Panel
 
 ![TA1FM Web Panel](TA1FM-Web-Panel.png)
+## Kaynaklar ve Teşekkür / Credits & Acknowledgements
+
+**🇹🇷 Türkçe**
+
+TA1FM LoRa APRS iGate & Digi projesinin geliştirilmesinde Ricardo Guzman'ın açık kaynak LoRa APRS iGate projesinden ve donanım yapılandırmalarından yararlanılmıştır.
+
+Ricardo Guzman'ın çalışmaları ve amatör telsiz topluluğuna katkıları için teşekkür ederiz.
+
+**🇬🇧 English**
+
+The TA1FM LoRa APRS iGate & Digi project was developed with reference to Ricardo Guzman's open-source LoRa APRS iGate project and its hardware configuration.
+
+Special thanks to Ricardo Guzman for his contributions to the amateur radio community.
+
+**Original project / Kaynak proje:**  
+https://github.com/richonguzman/LoRa_APRS_iGate
+
+**License / Lisans:** GNU General Public License v3.0

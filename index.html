@@ -1,65 +1,56 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a1425">
-  <title>TA1FM LoRa APRS iGate & Digi | Web Installer</title>
-  <meta name="description" content="Heltec Wireless Stick Lite V3 için TA1FM LoRa APRS iGate & Digi V1.5.7.1 web üzerinden USB firmware yükleme.">
-  <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
-  <style>
-    :root { color-scheme:dark; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; --esp-tools-button-color:#14b8a6; --esp-tools-button-text-color:#051524; --esp-tools-button-border-radius:12px }
-    * { box-sizing:border-box }
-    body { margin:0; min-height:100vh; background:radial-gradient(ellipse at 70% 0%,#16365a 0%,#0b1728 48%,#07111f 100%); color:#f4f8ff }
-    main { max-width:780px; padding:44px 20px 70px; margin:auto }
-    .eyebrow { color:#5eead4; letter-spacing:.13em; font-size:.78rem; font-weight:800 }
-    h1 {font-size:clamp(1.9rem,5vw,3.15rem);letter-spacing:-.035em;line-height:1.14;margin:15px 0}
-    .lead {color:#b8c9dc;font-size:1.06rem;line-height:1.7;max-width:680px}
-    .panel {background:#101f34;border:1px solid #304963;border-radius:20px;padding:28px;margin-top:30px;box-shadow:0 18px 45px #01091355}
-    h2 {margin:0 0 18px;font-size:1.28rem} p, li{line-height:1.65} .muted{color:#bed0e1}
-    .tag {display:inline-block;background:#133e43;color:#8bf2e0;padding:6px 12px;border-radius:99px;font-size:.84rem;font-weight:700;margin-top:12px}
-    ol{padding-left:24px} li{margin:8px 0}
-    .warning {border-left:4px solid #f6c55e;background:#3a2d1b;padding:14px 17px;border-radius:8px;margin:21px 0;color:#ffe8b0}
-    .button-shell {padding:15px 0 5px}
-    esp-web-install-button[install-unsupported] .support, esp-web-install-button[install-not-allowed] .support {display:block}
-    .support {color:#fca5a5;line-height:1.5}
-    code {background:#243449;border-radius:5px;padding:2px 6px;color:#a7f3d0;word-break:break-word}
-    a {color:#66dbec} a:hover {color:white}
-    footer {margin-top:28px;color:#92a8c0;font-size:.9rem}
-    @media(max-width:500px){.panel{padding:20px}}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1425">
+<title>TA1FM LoRa APRS iGate & Digi | Web Installer</title>
+<meta name="description" content="Heltec Wireless Stick Lite V3 ESP32-S3 için TA1FM çift sürümlü web firmware yükleyici">
+<script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;--esp-tools-button-color:#14b8a6;--esp-tools-button-text-color:#051524;--esp-tools-button-border-radius:12px}
+*{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 70% 0%,#16365a 0%,#0b1728 48%,#07111f 100%);color:#f4f8ff}
+main{max-width:780px;padding:44px 20px 70px;margin:auto}.eyebrow{color:#5eead4;letter-spacing:.13em;font-size:.78rem;font-weight:800}h1{font-size:clamp(1.9rem,5vw,3.15rem);letter-spacing:-.035em;line-height:1.14;margin:15px 0}.lead{color:#b8c9dc;font-size:1.06rem;line-height:1.7;max-width:680px}
+.panel{background:#101f34;border:1px solid #304963;border-radius:20px;padding:28px;margin-top:30px;box-shadow:0 18px 45px #01091355}h2{margin:0 0 18px;font-size:1.28rem}p,li{line-height:1.65}.muted{color:#bed0e1}.tag{display:inline-block;background:#133e43;color:#8bf2e0;padding:6px 12px;border-radius:99px;font-size:.84rem;font-weight:700;margin-top:12px}ol{padding-left:24px}li{margin:8px 0}
+.warning{border-left:4px solid #f6c55e;background:#3a2d1b;padding:14px 17px;border-radius:8px;margin:21px 0;color:#ffe8b0}.button-shell{padding:18px 0 5px}.support{color:#fca5a5;line-height:1.5}code{background:#243449;border-radius:5px;padding:2px 6px;color:#a7f3d0;word-break:break-word}a{color:#66dbec}a:hover{color:white}footer{margin-top:28px;color:#92a8c0;font-size:.9rem}
+fieldset{border:0;padding:0;margin:20px 0}legend{font-weight:700;margin:0 0 12px}.option{display:block;cursor:pointer;padding:15px 16px;border:1px solid #395572;border-radius:12px;margin:10px 0;background:#172940}.option:has(input:checked){border:2px solid #5eead4;background:#12383c;padding:14px 15px}.option input{accent-color:#14b8a6;margin-right:10px}.option small{display:block;margin:6px 0 0 27px;color:#b7cde0;line-height:1.45}.selected{font-weight:650;color:#a5f3e0;margin:12px 0}.installbtn{font:inherit;border:0;border-radius:12px;padding:15px 30px;font-weight:800;font-size:1.08rem;background:#14b8a6;color:#051524;cursor:pointer} @media(max-width:500px){.panel{padding:20px}}
+</style>
 </head>
-<body>
-<main>
-  <div class="eyebrow">TA1FM · OPEN SOURCE · WEB FLASHER</div>
-  <h1>LoRa APRS iGate & Digi<br>Web Installer</h1>
-  <p class="lead">Heltec Wireless Stick Lite V3 cihazınıza TA1FM firmware yazılımını Chrome veya Edge tarayıcısından USB bağlantısıyla yükleyin. Arduino IDE gerekmez.</p>
-  <span class="tag">V1.5.7.1 · ESP32-S3 + SX1262</span>
-  <section class="panel" aria-labelledby="install-title">
-    <h2 id="install-title">Firmware yükleme / Install firmware</h2>
-    <ol>
-      <li>Heltec Wireless Stick Lite V3 kartına uygun anteni bağlayın; kartı veri aktarabilen USB kablosuyla bilgisayara takın.</li>
-      <li>Chrome veya Edge tarayıcısında aşağıdaki <strong>INSTALL</strong> düğmesine basın.</li>
-      <li>Doğru seri portu seçin, açılan penceredeki uyarıları okuyun ve yüklemeyi onaylayın.</li>
-      <li>İşlem bittikten sonra cihazı yeniden başlatın.</li>
-    </ol>
-    <div class="warning"><strong>Önemli / Important:</strong> Bu kurulum mevcut yazılımı değiştirir ve kayıtlı Wi-Fi/APRS ayarlarını silebilir. Yüklemeden önce ayarlarınızı yedekleyin. Bu paket yalnızca Heltec Wireless Stick Lite V3 içindir. Yükleme sırasında USB bağlantısını kesmeyin.</div>
-    <div class="button-shell">
-      <esp-web-install-button manifest="./manifest.json">
-        <button slot="activate" style="font:inherit;border:0;border-radius:12px;padding:15px 30px;font-weight:800;font-size:1.08rem;background:#14b8a6;color:#051524;cursor:pointer">🔌 INSTALL FIRMWARE</button>
-        <span slot="unsupported" class="support">Bu tarayıcı Web Serial desteklemiyor. Windows/macOS/Linux üzerinde güncel Chrome veya Edge kullanın.</span>
-        <span slot="not-allowed" class="support">Web Installer için HTTPS üzerinden açılan sayfa gerekiyor.</span>
-      </esp-web-install-button>
-    </div>
-  </section>
-  <section class="panel">
-    <h2>İlk kurulum / First setup</h2>
-    <p class="muted">Cihaz ilk açılışta kayıtlı Wi-Fi ayarı bulamazsa kurulum ağı oluşturur.</p>
-    <p><strong>Wi-Fi ağı:</strong> <code>TA1FM-APRS-SETUP</code><br><strong>AP şifresi:</strong> <code>1234567890</code><br><strong>Panel:</strong> <code>http://192.168.4.1</code></p>
-    <p class="muted">Varsayılan yönetici: <code>admin</code> · Parola: <code>1234567890</code>. <br>Parolaları kurulumdan sonra panelden değiştirebilirsiniz. <br> You can change the passwords from the control panel after installation.</p>
-    <p><a href="https://github.com/TA1FM/TA1FM-LoRa-APRS-iGate-Digi/blob/main/KURULUM.md">Türkçe kurulum rehberi</a> · <a href="https://github.com/TA1FM/TA1FM-LoRa-APRS-iGate-Digi/blob/main/INSTALLATION_EN.md">English guide</a></p>
-  </section>
-  <footer>TA1FM LoRa APRS iGate & Digi · <a href="https://github.com/TA1FM/TA1FM-LoRa-APRS-iGate-Digi">GitHub</a> · 73 de TA1FM 📡</footer>
+<body><main>
+<div class="eyebrow">TA1FM · OPEN SOURCE · WEB FLASHER</div>
+<h1>LoRa APRS iGate &amp; Digi<br>Web Installer</h1>
+<p class="lead">Heltec Wireless Stick Lite V3 cihazınıza TA1FM firmware yazılımını Chrome veya Edge üzerinden USB bağlantısıyla yükleyin. Arduino IDE gerekmez.</p>
+<span class="tag">V1.5.8 / V1.5.7.1 · ESP32-S3 + SX1262</span>
+<section class="panel" aria-labelledby="install-title">
+<h2 id="install-title">Firmware yükleme / Install firmware</h2>
+<fieldset><legend>Yüklenecek sürümü seçin / Select version</legend>
+<label class="option"><input type="radio" name="firmware" value="v1.5.8" checked><strong>V1.5.8 — Güncel sürüm / Latest</strong><small>SSD1306 / SH1106, pil ölçümü ve kalibrasyon, OLED uyku, güvenlik ayarları.</small></label>
+<label class="option"><input type="radio" name="firmware" value="v1.5.7.1"><strong>V1.5.7.1 — Önceki sürüm / Previous</strong><small>İlk yayımlanan kararlı saha testi; eski sürüme dönüş için.</small></label>
+</fieldset>
+<p class="selected" id="selected-version" aria-live="polite">Seçilen / Selected: V1.5.8</p>
+<ol><li>Heltec Wireless Stick Lite V3 kartına uygun anteni bağlayın ve USB veri kablosunu takın.</li><li>Sürümü seçip <strong>INSTALL FIRMWARE</strong> butonuna basın.</li><li>Doğru COM portunu seçin ve yüklemeyi onaylayın.</li><li>İşlem tamamlanınca cihazı yeniden başlatın.</li></ol>
+<div class="warning"><strong>Önemli / Important:</strong> Bu işlem mevcut firmware'i değiştirir ve kayıtlı Wi-Fi/APRS ayarlarını silebilir. Yedek alın. Eski sürüme dönüşte ayar uyumluluğu garanti değildir. Yalnızca Heltec Wireless Stick Lite V3 içindir. USB bağlantısını kesmeyin.</div>
+<div class="button-shell"><esp-web-install-button id="installer" manifest="./manifest-v1.5.8.json">
+<button class="installbtn" slot="activate">🔌 INSTALL FIRMWARE</button>
+<span slot="unsupported" class="support">Web Serial desteklenmiyor. Windows, macOS veya Linux üzerinde güncel Chrome/Edge kullanın.</span>
+<span slot="not-allowed" class="support">Bu sayfa HTTPS üzerinden açılmalıdır.</span>
+</esp-web-install-button></div>
+</section>
+<section class="panel"><h2>İlk kurulum / First setup</h2><p class="muted">Cihazda kayıtlı Wi-Fi ayarı yoksa kurulum ağı oluşturulur.</p>
+<p><strong>Wi-Fi:</strong> <code>TA1FM-APRS-SETUP</code><br><strong>AP parolası:</strong> <code>1234567890</code><br><strong>Kurulum:</strong> <code>http://192.168.4.1</code></p>
+<p class="muted">Varsayılan yönetici kullanıcı adı: <code>admin</code>. Yönetici parolası, yüklediğiniz firmware paketinin kaynak kodundaki varsayılan değere bağlıdır; bunu kullandığınız sürümün yayımlanan kaynak kodundan kontrol edin ve kurulumdan sonra değiştirin.</p>
+<p><a href="https://github.com/TA1FM/TA1FM-LoRa-APRS-iGate-Digipeater/blob/main/KURULUM.md">Türkçe rehber</a> · <a href="https://github.com/TA1FM/TA1FM-LoRa-APRS-iGate-Digipeater/blob/main/INSTALLATION_EN.md">English guide</a></p></section>
+<footer>TA1FM LoRa APRS iGate &amp; Digi · <a href="https://github.com/TA1FM/TA1FM-LoRa-APRS-iGate-Digipeater">GitHub</a> · 73 de TA1FM 📡</footer>
 </main>
-</body>
-</html>
+<script>
+const installer=document.getElementById('installer');
+const label=document.getElementById('selected-version');
+const manifests={'v1.5.8':'./manifest-v1.5.8.json','v1.5.7.1':'./manifest-v1.5.7.1.json'};
+for(const input of document.querySelectorAll('input[name="firmware"]')){
+  input.addEventListener('change',()=>{
+    if(!input.checked)return;
+    installer.setAttribute('manifest',manifests[input.value]);
+    label.textContent='Seçilen / Selected: V'+input.value.slice(1);
+  });
+}
+</script>
+</body></html>

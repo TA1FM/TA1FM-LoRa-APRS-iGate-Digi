@@ -1,0 +1,17 @@
+{
+  "name": "TA1FM LoRa APRS iGate & Digi",
+  "version": "1.5.7.1",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "improv": false,
+      "parts": [
+        {
+          "path": "Heltec-wsl-v3-oled-V1_5_7_1.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}

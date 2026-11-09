@@ -8,7 +8,7 @@
       "improv": false,
       "parts": [
         {
-          "path": "TA1FM_LoRa_APRS_iGate_V1_5_7_1.ino.merged.bin",
+          "path": "Heltec-wsl-v3-oled.bin",
           "offset": 0
         }
       ]

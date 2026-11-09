@@ -1,3 +1,10 @@
+## 🌐 Web Installer / Tarayıcıdan Kurulum
+
+[🚀 TA1FM Web Installer — Firmware Yükle](https://ta1fm.github.io/TA1FM-LoRa-APRS-iGate-Digipeater/)
+
+Heltec Wireless Stick Lite V3 cihazınıza Chrome veya Edge üzerinden USB ile firmware yükleyebilirsiniz.
+
+Install firmware directly from your browser using Chrome or Edge. Supported hardware: Heltec Wireless Stick Lite V3 only.
 # TA1FM LoRa APRS iGate & Digipeater
 
 **ESP32-S3 tabanlı LoRa APRS Internet Gateway ve Digipeater yazılımı**

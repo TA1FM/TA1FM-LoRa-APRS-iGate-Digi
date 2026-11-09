@@ -1,0 +1,17 @@
+{
+  "name": "TA1FM LoRa APRS iGate & Digi",
+  "version": "1.5.7.1",
+  "new_install_prompt_erase": true,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "improv": false,
+      "parts": [
+        {
+          "path": "TA1FM_LoRa_APRS_iGate_V1_5_7_1.ino.merged.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}

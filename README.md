@@ -7,6 +7,15 @@ Heltec Wireless Stick Lite V3 cihazınıza Chrome veya Edge üzerinden USB ile f
 Install firmware directly from your browser using Chrome or Edge. Supported hardware: Heltec Wireless Stick Lite V3 only.
 # TA1FM LoRa APRS iGate & Digipeater
 
+## 📸 TA1FM LoRa APRS iGate
+
+<p align="center">
+  <img src="images/ta1fm-igate-oled.jpg" width="320" alt="TA1FM LoRa APRS iGate OLED">
+</p>
+
+**TA1FM-10 — 433.775 MHz LoRa APRS iGate**
+
+
 **ESP32-S3 tabanlı LoRa APRS Internet Gateway ve Digipeater yazılımı**
 
 **English:** ESP32-S3 based LoRa APRS Internet Gateway and Digipeater firmware.
